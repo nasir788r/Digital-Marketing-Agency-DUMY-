@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+@import "swiper/css/autoplay";
+
+:root {
+  --teal: #0E4640;
+  --dark-teal: #082F2B;
+  --gold: #E6B85C;
+  --gold-dark: #D19F3D;
+  --bg-light: #F7F4EC;
+  --text: #102421;
+  --text-muted: #64706C;
+}
+
+@theme {
+  --font-serif: "Newsreader", "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-teal: #0E4640;
+  --color-dark-teal: #082F2B;
+  --color-gold: #E6B85C;
+  --color-gold-dark: #D19F3D;
+  --color-bg-light: #F7F4EC;
+  --color-text-main: #102421;
+  --color-text-muted: #64706C;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #102421;
+    background-color: #F7F4EC;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, .serif {
+    font-family: var(--font-serif);
+  }
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.gold-text {
+  color: #E6B85C;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 70, 64, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  border-color: rgba(14, 70, 64, 0.26);
+}
+
+.btn-teal {
+  background-color: #0E4640;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-teal:hover {
+  background-color: #082F2B;
+  box-shadow: 0 4px 12px rgba(14, 70, 64, 0.25);
+}
+
+.btn-outline {
+  border: 1px solid #0E4640;
+  color: #0E4640;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: #0E4640;
+  color: #FFFFFF;
+}
+
+.btn-gold {
+  background-color: #E6B85C;
+  color: #082F2B;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  background-color: #D19F3D;
+  box-shadow: 0 4px 14px rgba(230, 184, 92, 0.35);
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #E6B85C;
+  border: 1px solid #E6B85C;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge-teal {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0E4640;
+  border: 1px solid rgba(14, 70, 64, 0.25);
+  background-color: rgba(14, 70, 64, 0.06);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Custom Swiper pagination dots styling */
+.swiper-pagination-bullet {
+  background: #0E4640 !important;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #E6B85C !important;
+  opacity: 1;
+  width: 22px !important;
+  border-radius: 9999px !important;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #0E4640;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #082F2B;
+}
+
